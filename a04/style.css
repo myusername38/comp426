@@ -1,0 +1,151 @@
+body{
+    background-color: #ADD8E6;
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.super-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    background-color: #f8f8f8;
+    border: 2px solid black;
+    border-radius: 4px; 
+    text-align: center;
+    max-width: 400px;
+    margin-top: 0px !important;
+}
+.super-image {
+    border: 8px solid white;
+    border-radius: 94px;
+}
+.super-title {
+    font-family: 'Shrikhand', cursive, Helvetica, sans-serif;
+    margin-bottom: 4px;
+    font-size: 32px;
+}
+.super-slogan{
+    margin-top: 4px;
+    font-family: 'Shrikhand', cursive, Helvetica, sans-serif;
+}
+.super-info {
+    padding: 8px;
+    text-align: left;
+}
+.super-edit {
+    width: 80px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 16px; 
+    background: rgba(255, 255, 255, .7);
+}
+.super-persons {
+    font-size: 24px;
+    color: black;
+    font-family: 'Squada One', cursive, Helvetica, sans-serif;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.super-bold {
+    color: black;
+}
+.super-description {
+    font-family: 'Open Sans', sans-serif;
+    min-height: 110px;
+}
+.edit{
+    height: 40px;
+    width: 80px; 
+    border: 2px solid black;
+    border-radius: 4px; 
+    background-color: rgba(1, 1, 1, .7);
+    color: white;
+    margin-right: 8px;
+    margin-left: auto;
+    margin-bottom: 8px;
+}
+.edit-form {
+    max-width: 600px !important;
+}
+.form-top{
+    justify-content: center !important;
+    align-content: center;
+    align-items: center;
+}
+#hidden {
+    display: none;
+}
+
+.mlr-auto { margin-left: auto !important; margin-right: auto !important; }
+.m-0 { margin: 0; }
+.m-xs { margin: 4px !important; }
+.m-sm { margin: 8px !important; }
+.m-md { margin: 16px !important; }
+.m-lg { margin: 24px !important; }
+.m-xl { margin: 32px !important; }
+.mt-0 { margin-top: 0 !important; }
+.mt-auto { margin-top: auto !important; }
+.mt-xs { margin-top: 4px !important; }
+.mt-sm { margin-top: 8px !important; }
+.mt-md { margin-top: 16px !important; }
+.mt-lg { margin-top: 24px !important; }
+.mt-xl { margin-top: 32px !important; }
+.mr-0 { margin-right: 0 !important; }
+.mr-auto { margin-right: auto !important; }
+.mr-xs { margin-right: 4px !important; }
+.mr-sm { margin-right: 8px !important; }
+.mr-md { margin-right: 16px !important; }
+.mr-lg { margin-right: 24px !important; }
+.mr-xl { margin-right: 32px !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mb-auto { margin-bottom: auto !important; }
+.mb-xs { margin-bottom: 4px !important; }
+.mb-sm { margin-bottom: 8px !important; }
+.mb-md { margin-bottom: 16px !important; }
+.mb-lg { margin-bottom: 24px !important; }
+.mb-xl { margin-bottom: 32px !important; }
+.ml-0 { margin-left: 0 !important; }
+.ml-auto { margin-left: auto !important; }
+.ml-xs { margin-left: 4px !important; }
+.ml-sm { margin-left: 8px !important; }
+.ml-md { margin-left: 16px !important; }
+.ml-lg { margin-left: 24px !important; }
+.ml-xl { margin-left: 32px !important; }
+.p-0 { padding: 0 !important; }
+.p-xs { padding: 4px !important; }
+.p-sm { padding: 8px !important; }
+.p-md { padding: 16px !important; }
+.p-lg { padding: 24px !important; }
+.p-xl { padding: 32px !important; }
+.pt-0 { padding-top: 0 !important; }
+.pt-xs { padding-top: 4px !important; }
+.pt-sm { padding-top: 8px !important; }
+.pt-md { padding-top: 16px !important; }
+.pt-lg { padding-top: 24px !important; }
+.pt-xl { padding-top: 32px !important; }
+.pr-0 { padding-right: 0 !important; }
+.pr-xs { padding-right: 4px !important; }
+.pr-sm { padding-right: 8px !important; }
+.pr-md { padding-right: 16px !important; }
+.pr-lg { padding-right: 24px !important; }
+.pr-xl { padding-right: 32px !important; }
+.pb-0 { padding-bottom: 0 !important; }
+.pb-xs { padding-bottom: 4px !important; }
+.pb-sm { padding-bottom: 8px !important; }
+.pb-md { padding-bottom: 16px !important; }
+.pb-lg { padding-bottom: 24px !important; }
+.pb-xl { padding-bottom: 32px !important; }
+.pl-xs { padding-left: 4px !important; }
+.pl-sm { padding-left: 8px !important; }
+.pl-md { padding-left: 16px !important; }
+.pl-lg { padding-left: 24px !important; }
+.pl-xl { padding-left: 32px !important; }
+.w-100 { width: 100% !important; }
+.h-100 { height: 100% !important; }

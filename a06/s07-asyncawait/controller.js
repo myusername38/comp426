@@ -20,7 +20,13 @@ document.body.onload = async function () {
   // TODO: Write code to solve the maze here
   //  \/ \/ \/ \/ \/
 
-
+  const doMoves = async function() {
+    await token.moveAsync('north');
+    await token.moveAsync('east');
+    await token.moveAsync('east');
+    await token.moveAsync('north');
+  };
+  doMoves();
 
   //  /\ /\ /\ /\ /\
 }

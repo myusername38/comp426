@@ -10,10 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "bestzip": "^2.1.4",
+    "browser-sync": "^2.26.7",
+    "bulma": "^0.7.5",
     "chalk": "^2.4.2",
     "cryptr": "^4.0.2",
     "dotenv": "^8.0.0",
     "form-data": "^2.5.0",
+    "jquery": "^3.4.1",
     "prompts": "^2.1.0"
   }
 }

@@ -5,8 +5,9 @@
  * example: identifyVariable(4);
  * returns: { type: 'number', value: 4 }
  */
+console.log(identifyVariable(4));
 export function identifyVariable(variable) {
-
+   return({type: typeof variable, value: variable});
 }
 
 
@@ -23,8 +24,15 @@ export function identifyVariable(variable) {
  ]
 
  */
+console.log(identifyArray(['some', 3, [3, 4], false]));
 export function identifyArray(array) {
-
+   let elements = []
+   let i = 0;
+   array.forEach(function(element){
+      elements[i] = {type: typeof element, value: element};
+      i++
+   });
+   return elements;
 }
 
 /**
@@ -44,7 +52,8 @@ export function identifyArray(array) {
  obj now does not contain the `password` field
  */
 export function removeKey(object, key) {
-
+   delete object[key];
+   return object;
 }
 
 /**
@@ -53,18 +62,24 @@ export function removeKey(object, key) {
  * @param key
  * @returns {*} The object with its keys removed
  * see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
- * let obj = {
+ */
+   let obj = {
     name: 'Mr. Boss',
     title: 'boss',
     age: 33,
     password: 'pass123'
 };
- obj = removeKeyNonDestructive(obj, 'password');
+ console.log(removeKeyNonDestructive(obj, 'password'));
+/*
  obj will not have the `password` field only because it was assigned the result of the function.
  If only `removeKeyNonDestructive` was called, nothing would have changed.
  */
-export function removeKeyNonDestructive(object, key) {
 
+
+export function removeKeyNonDestructive(object, key) {
+   const newObject = JSON.parse(JSON.stringify(object));
+   delete newObject[key];
+   return newObject;
 }
 
 /**
@@ -75,19 +90,24 @@ export function removeKeyNonDestructive(object, key) {
  *
  * example:
 
-
- let obj = {
+*/
+  obj = {
     name: 'Mr. Boss',
     title: 'boss',
     age: 33,
     password: 'pass123'
  };
- obj = removeKeys(obj, ['password', 'age']);
+  removeKeys(obj, ['password', 'age']);
  // object not looks like this
- { name: 'Mr. Boss', title: 'boss' }
+ /*
+{ name: 'Mr. Boss', title: 'boss' }
 
  * @return {*} The object with its keys removed.
  */
 export function removeKeys(object, keyList) {
-
+   const newObject = JSON.parse(JSON.stringify(object));
+   keyList.forEach(function(element) {
+      delete newObject[element];
+   });
+   return newObject;
 }

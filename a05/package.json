@@ -1,0 +1,16 @@
+{
+  "name": "a05",
+  "version": "1.0.0",
+  "description": "",
+  "main": "data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.7.5",
+    "jQuery": "^1.7.4",
+    "jquery": "^3.4.1"
+  }
+}

@@ -1,7 +1,6 @@
 {
   "name": "a06",
   "version": "1.0.0",
-  "description": "",
   "main": "maze.js",
   "scripts": {
     "callbacks": "node -r esm exercises/1_callbacks.js",
@@ -13,6 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "esm": "^3.2.25"
-  }
+    "browser-sync": "^2.26.7",
+    "bulma": "^0.7.5",
+    "esm": "^3.2.25",
+    "jquery": "^3.4.1"
+  },
+  "description": ""
 }

@@ -1,4 +1,4 @@
-import mpg_data from "./data/mpg_data";
+ import mpg_data from "./data/mpg_data";
 import {getStatistics} from "./medium_1";
 
 /*
@@ -19,11 +19,34 @@ see under the methods section
  *
  * @param {allCarStats.ratioHybrids} ratio of cars that are hybrids
  */
+export function getAverageMPG() {
+    let citySum = 0;
+    let hwySum = 0;
+    mpg_data.map(c => {
+        citySum += c.city_mpg;
+        hwySum += c.highway_mpg;
+    });
+    const city = citySum / mpg_data.length;
+    const highway = hwySum / mpg_data.length;
+    return { city, highway };
+}
+export function getRatioHybrids() {
+    let hybrids = 0;
+    mpg_data.forEach(c => {
+        if(c.hybrid){
+            hybrids++;
+        }
+    });
+    return (hybrids / mpg_data.length);
+}
+console.log(getAverageMPG());
+console.log(getRatioHybrids());
 export const allCarStats = {
-    avgMpg: undefined,
-    allYearStats: undefined,
-    ratioHybrids: undefined,
+    avgMpg: getAverageMPG(),
+    allYearStats: getStatistics(mpg_data.map(c => c.year)),
+    ratioHybrids: getRatioHybrids(),
 };
+
 
 
 /**
@@ -83,7 +106,53 @@ export const allCarStats = {
  *
  * }
  */
+console.log(getMakerHybrids());
+export function getMakerHybrids() {
+    let hybrids = []; 
+    mpg_data.map(c => {
+        let maker = hybrids.find(make => make['make'] === c.make); 
+        if (maker && c.hybrid){
+            maker.hybrids[maker.hybrids.length] = c.id;
+        } else if (c.hybrid) {
+            hybrids[hybrids.length] = { make: c.make, hybrids: [c.id] } ;
+        }
+    });
+    hybrids.sort( function(a, b) { return b.hybrids.length - a.hybrids.length} )
+    return hybrids;
+}
+console.log(getAvgMpgByYearAndHybrid());
+export function getAvgMpgByYearAndHybrid() {
+    let years = [];
+    let output = {};
+    mpg_data.forEach( c => {
+        if (!years.filter(year => year === c.year)[0]) {
+            years[years.length] = c.year;
+        }
+    });
+    years.map( y => {
+        let hybrids = mpg_data.filter(c => (c.year === y && c.hybrid));
+        let nonHybrids = mpg_data.filter(c => (c.year === y && !c.hybrid));
+        output[y] = {
+            hybrid: getAverageMPGHelper(hybrids),
+            notHybrid: getAverageMPGHelper(nonHybrids),
+        }
+    });
+    return output;
+}
+export function getAverageMPGHelper(data) {
+    let citySum = 0;
+    let hwySum = 0;
+    data.map(c => {
+        citySum += c.city_mpg;
+        hwySum += c.highway_mpg;
+    });
+    const city = citySum / data.length;
+    const highway = hwySum / data.length;
+    return { city, highway };
+}
+console.log(getAvgMpgByYearAndHybrid());
+
 export const moreStats = {
-    makerHybrids: undefined,
-    avgMpgByYearAndHybrid: undefined
+    makerHybrids: getMakerHybrids(),
+    avgMpgByYearAndHybrid: getAvgMpgByYearAndHybrid()
 };
