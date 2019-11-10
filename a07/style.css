@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+
+body {
+    width: 100vw;
+    min-height: 100%;
+    background-color: #254E70;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+.main {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.info-box {
+    width: 100%;
+    max-width: 600px;
+    margin-top: calc(20vh - 100px);
+    align-content: center;
+    text-align: center;
+    border-radius: 20px; 
+    background-color: #8EE3EF;
+    border: 3px solid black;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 48px;
+    color: #C33C54;
+    width: fit-content;
+}
+
+.sub-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 32px;
+    color: #C33C54;
+    width: fit-content;
+}
+
+input {
+    width: fit-content;
+    align-self: center;
+}
+
+h3 {
+    width: fit-content;
+}
+
+a {
+    width: fit-content;
+    align-self: center;
+}
+
+button {
+    width: fit-content;
+    align-self: center;
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
+
+.play-button {
+    align-self: center;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: rgba(.5, .5, .5, .2);
+}
+
+.play-button:hover {
+    transform: scale(1.05, 1.05);
+    transition-timing-function: ease;
+    transition: 0.2s;
+}
+
+.gameboard {
+    border-radius: 20px;
+    width: auto;
+    min-width: 600px;
+    max-width: 1000px;
+    height: auto;
+    min-height: 400px;
+    background-color: #8EE3EF;
+    border: 3px solid black;
+}
+.howTo {
+    max-width: 400px;
+    text-align: center;
+    justify-content: center;
+}
+.gameboard {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gamerow {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+}
+
+.gameTile {
+    width: 80px;
+    height: 80px;
+    display: flex; 
+    border-radius: 4px;
+    flex-direction: row;
+    justify-content: center;
+    margin: 4px;
+}
+.filled {
+    background-color: #91AEC1;
+}
+.empty {
+    background-color: rgba(145, 174, 193, .4);
+}
+
+p {
+    margin-top: 24px;
+    margin-bottom: 4px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 24px;
+    color: #C33C54;
+}
+
+.mlr-auto { margin-left: auto !important; margin-right: auto !important; }
+.m-0 { margin: 0; }
+.m-xs { margin: 4px !important; }
+.m-sm { margin: 8px !important; }
+.m-md { margin: 16px !important; }
+.m-lg { margin: 24px !important; }
+.m-xl { margin: 32px !important; }
+.mt-0 { margin-top: 0 !important; }
+.mt-auto { margin-top: auto !important; }
+.mt-xs { margin-top: 4px !important; }
+.mt-sm { margin-top: 8px !important; }
+.mt-md { margin-top: 16px !important; }
+.mt-lg { margin-top: 24px !important; }
+.mt-xl { margin-top: 32px !important; }
+.mr-0 { margin-right: 0 !important; }
+.mr-auto { margin-right: auto !important; }
+.mr-xs { margin-right: 4px !important; }
+.mr-sm { margin-right: 8px !important; }
+.mr-md { margin-right: 16px !important; }
+.mr-lg { margin-right: 24px !important; }
+.mr-xl { margin-right: 32px !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mb-auto { margin-bottom: auto !important; }
+.mb-xs { margin-bottom: 4px !important; }
+.mb-sm { margin-bottom: 8px !important; }
+.mb-md { margin-bottom: 16px !important; }
+.mb-lg { margin-bottom: 24px !important; }
+.mb-xl { margin-bottom: 32px !important; }
+.ml-0 { margin-left: 0 !important; }
+.ml-auto { margin-left: auto !important; }
+.ml-xs { margin-left: 4px !important; }
+.ml-sm { margin-left: 8px !important; }
+.ml-md { margin-left: 16px !important; }
+.ml-lg { margin-left: 24px !important; }
+.ml-xl { margin-left: 32px !important; }
+.p-0 { padding: 0 !important; }
+.p-xs { padding: 4px !important; }
+.p-sm { padding: 8px !important; }
+.p-md { padding: 16px !important; }
+.p-lg { padding: 24px !important; }
+.p-xl { padding: 32px !important; }
+.pt-0 { padding-top: 0 !important; }
+.pt-xs { padding-top: 4px !important; }
+.pt-sm { padding-top: 8px !important; }
+.pt-md { padding-top: 16px !important; }
+.pt-lg { padding-top: 24px !important; }
+.pt-xl { padding-top: 32px !important; }
+.pr-0 { padding-right: 0 !important; }
+.pr-xs { padding-right: 4px !important; }
+.pr-sm { padding-right: 8px !important; }
+.pr-md { padding-right: 16px !important; }
+.pr-lg { padding-right: 24px !important; }
+.pr-xl { padding-right: 32px !important; }
+.pb-0 { padding-bottom: 0 !important; }
+.pb-xs { padding-bottom: 4px !important; }
+.pb-sm { padding-bottom: 8px !important; }
+.pb-md { padding-bottom: 16px !important; }
+.pb-lg { padding-bottom: 24px !important; }
+.pb-xl { padding-bottom: 32px !important; }
+.pl-xs { padding-left: 4px !important; }
+.pl-sm { padding-left: 8px !important; }
+.pl-md { padding-left: 16px !important; }
+.pl-lg { padding-left: 24px !important; }
+.pl-xl { padding-left: 32px !important; }
+.w-100 { width: 100% !important; }
+.h-100 { height: 100% !important; }
+.w-f { width: fit-content !important; align-self: center !important; };
+
+.fade-in-fast {
+    -webkit-animation: fadein .8s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein .8s; /* Firefox < 16 */
+    -ms-animation: fadein .8s; /* Internet Explorer */
+    -o-animation: fadein .8s; /* Opera < 12.1 */
+    animation: fadein .8s;
+  }
+  .fade-in-slow {
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+    animation: fadein 1s;
+  }
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  /* Firefox < 16 */
+  @-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  /* Internet Explorer */
+  @-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  /* Opera < 12.1 */
+  @-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }

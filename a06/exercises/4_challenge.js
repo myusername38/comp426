@@ -39,12 +39,18 @@ export async function getTwoHeroes(heroData, hero1Id, hero2Id) {
  * @returns {Promise<object>}
  */
 export async function getTwoHeroesSolution(heroData, hero1Id, hero2Id) {
+  return new Promise(function(resolve, reject) {
+    const hero1 = heroData.find( h => h.id = hero1Id);
+    const hero2 = heroData.find(h => h.id = hero1Id);
+    setTimeout(() => resolve(hero1, hero2), 1500);
+  });
+  hero1 = getTwoHeroes(heroData, hero1Id, hero2Id);
 
 }
 
 
 // Uncomment this code to locally run your getTwoHeroesSolution() function
-/*
+
 async function run() {
   const t0 = performance.now();
   const result = await getTwoHeroes(heroData, 2, 3);
@@ -66,5 +72,4 @@ async function runSolution() {
 }
 
 runSolution();
-*/
 

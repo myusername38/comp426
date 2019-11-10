@@ -17,6 +17,16 @@ import { heroData } from "./data";
  *                             after 1.5 seconds if no hero could be found
  */
 export function getHeroByIdPromise(heroData, id) {
+  return new Promise(function(resolve, reject) {
+    let hero = heroData.find(h => h.id == id);
+    if (hero) {
+      setTimeout(() => resolve(hero), 1500);
+    } else {
+      setTimeout(() => reject(`Hero with ${ id } could not be found`), 1500);
+    }
+  });
+
+
   // 1. Return a new Promise object. See the assignment write-up for
   //    instructions of how to use the new Promise() constructor.
 
@@ -34,7 +44,7 @@ export function getHeroByIdPromise(heroData, id) {
 
 
 // Uncomment this code to locally run your getHeroByIdCallback() function
-/*
+
 const hero2 = getHeroByIdPromise(heroData, 2)
   .then(hero => {
     console.log(`Found the hero with id ${hero.id}`, hero);
@@ -52,4 +62,4 @@ const heroError = getHeroByIdPromise(heroData, 20)
   .catch(error => {
     console.log(error);
   });
-*/
+

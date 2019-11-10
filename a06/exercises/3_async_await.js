@@ -17,13 +17,20 @@ import { heroData } from "./data";
  *                             1.5 seconds with the correct hero or rejects
  *                             after 1.5 seconds if no hero could be found
  */
-export function getHeroByIdAsync(heroData, id) {
-  // Copy-and-paste code here
+async function getHeroByIdAsync(heroData, id) {
+  return new Promise(function(resolve, reject) {
+    let hero = heroData.find(h => h.id == id);
+    if (hero) {
+      setTimeout(() => resolve(hero), 1500);
+    } else {
+      setTimeout(() => reject(`Hero with ${ id } could not be found`), 1500);
+    }
+  });
 }
 
 
 // Uncomment this code to locally run your getHeroByIdCallback() function
-/*
+
 async function run() {
   const hero2 = await getHeroByIdAsync(heroData, 2);
   console.log(`Because we are awaiting, this will run after the hero2 promise finishes: ${JSON.stringify(hero2, null, 2)}`);
@@ -35,7 +42,7 @@ async function run() {
   }
 }
 run();
-*/
+
 
 
 

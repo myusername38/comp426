@@ -11,10 +11,16 @@ keypress(process.stdin);
  */
 
 let game = new Game(4);
+game.loadGame({
+    "board": [4, 32, 4, 2, 2, 4, 8, 16, 128, 64, 4, 2, 2, 8, 2, 8],
+    "score": 0,
+    "won": false,
+    "over": false,
+});
 console.log(game.toString());
 
 game.onMove(gameState => {
-    console.log(game.toString());
+    //console.log(game.toString());
     // console.log(game.gameState);
 });
 
@@ -31,17 +37,23 @@ process.stdin.on('keypress', function (ch, key) {
     switch (key.name) {
         case 'right':
             game.move('right');
+            console.log(game.toString());
             break;
         case 'left':
             game.move('left');
-
+            console.log(game.toString());
             break;
         case 'down':
             game.move('down');
-
+            console.log(game.toString());
             break;
         case 'up':
             game.move('up');
+            console.log(game.toString());
+            break;
+        case 'n':
+            game.setupNewGame();
+            console.log(game.toString());
             break;
     }
     if (key && key.ctrl && key.name == 'c') {
